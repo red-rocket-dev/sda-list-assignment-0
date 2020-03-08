@@ -9,9 +9,10 @@ public class Main {
            - grades (lista Integerow)
          2. w mainie utworz 10 studentow i dodaj ich do listy students
          3. w klasie main utworz funkcje pozwalajaca wyliczac srednia oceny studentow
-         4. w klasie main utworz funkcje wyszukujaca studentow wedlug podanego imienia
-         5. W konsoli stworz "interfejs" pozwalajacy na dodawanie i usuwanie studentow
-         6. zamiast tworzyc 10 studentow "recznie" 10 razy wywolujac "new" odczytaj ich z pliku o strukturze:
+         4. w klasie main utworz funkcje wyszukujaca studentow wedlug czesci podanego nazwiska
+         5. w klasie main utworz funkcje wyszukujaca wedlug imienia i nazwiska (dokladnie wprowadzone imie i nazwisko)
+         6. W konsoli stworz "interfejs" pozwalajacy na dodawanie i usuwanie studentow
+         7. zamiast tworzyc 10 studentow "recznie" 10 razy wywolujac "new" odczytaj ich z pliku o strukturze:
             imie;nazwisko;ocena1,ocena2,ocena3
             np.
             Jakub;Plonka;1,2,3,4,5,6,2,2,4
