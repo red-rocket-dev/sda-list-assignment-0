@@ -1,9 +1,6 @@
 package pl.sda;
 
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.LinkedList;
-import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
@@ -30,14 +27,55 @@ public class Main {
         ArrayList<Integer> grades = new ArrayList<>();
         ArrayList<Student> students = new ArrayList<>();
         grades.add(3);
-        Student student2 = new Student("Jan", "Kowalski", grades);
         students.add(new Student("Jan", "Kowalski", grades));
         grades = new ArrayList<>();
+        grades.add(2);
+        grades.add(2);
+        grades.add(2);
+        grades.add(3);
+        students.add(new Student("Jakub", "Kowalski", grades));
+        grades = new ArrayList<>();
+        grades.add(2);
+        grades.add(1);
         grades.add(5);
-        students.add(student2);
+        students.add(new Student("Tomasz", "Kowalski", grades));
+        grades = new ArrayList<>();
+        grades.add(5);
+        grades.add(5);
+        students.add(new Student("Aleksander", "Kowalski", grades));
+        grades = new ArrayList<>();
+        grades.add(1);
+        grades.add(2);
+        students.add(new Student("Paweł", "Kowalski", grades));
+        grades = new ArrayList<>();
+        grades.add(5);
+        grades.add(6);
+        students.add(new Student("Kamil", "Kowalski", grades));
 
 
-        System.out.println(students);
-        System.out.println();
+        /*
+        tak lepiej nie robic(wydajnosc)
+        for(int i  = 0 ; i < students.size(); i ++) {
+            Student student = students.get(i);
+        }*/
+        //tak robic, bo to korzysta z iteratora "pod spodem"
+        for (Student student : students) {
+            System.out.println(student.getName() + " " + student.getSurname());
+            double avg = getAverageGrades(student);
+            System.out.println("Srednia ocen to: " + avg);
+            System.out.println();
+        }
+    }
+
+    private static double getAverageGrades(Student student) {
+        ArrayList<Integer> studentGrades = student.getGrades();
+        int gradesSum = 0;
+        for (Integer grade : studentGrades) {
+            gradesSum += grade;
+            System.out.print(grade + " ");
+        }
+        System.out.println("Suma ocen to: " + gradesSum);
+        //TODO: zrobic to dzielenie tak, zeby byla wieksza precyzja
+        return gradesSum / studentGrades.size();
     }
 }
