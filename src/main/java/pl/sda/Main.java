@@ -30,11 +30,10 @@ public class Main {
         ArrayList<Integer> grades = new ArrayList<>();
         ArrayList<Student> students = new ArrayList<>();
         grades.add(3);
+        Student student2 = new Student("Jan", "Kowalski", grades);
+        students.add(new Student("Jan", "Kowalski", grades));
         grades = new ArrayList<>();
         grades.add(5);
-        Student student2 = new Student("Jan", "Kowalski", grades);
-
-        students.add(new Student("Jan", "Kowalski", grades));
         students.add(student2);
 
 
